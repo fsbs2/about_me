@@ -1,0 +1,187 @@
+:root{
+    --color-gray:rgb(172, 172, 172);
+    --color-hover:rgb(133, 133, 133);
+}
+
+*{
+    margin:0;
+    padding:0;
+    border:0;
+}
+
+body {
+    font-family: 'Dancing Script', cursive;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    background: #282a36;
+    color: white;
+
+}
+body header{
+    padding: 32px;
+    text-align: center;
+    border-bottom: 2px solid #333;
+    background:rgba(0,0,0,0.1);
+}
+
+body header a{
+    font-size: 18px;
+    line-height:28px;
+    color:var(--color-gray);
+    text-decoration: none;
+    margin: 0px 16px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    
+}
+
+body header a:hover{
+    transition:800ms;
+    color:var(--color-hover);
+    font-size:19px;
+}
+
+#wrapper{
+    text-align: center;
+    padding:32px;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+#wrapper img{
+    border-radius: 50%;
+    border:1.5px solid black;
+    margin-bottom: 28px;
+    height: 270px;
+}
+
+#wrapper h1{
+    line-height: 62px;
+    font-weight: bolder;
+    font-size: 38px;
+    
+}
+
+#wrapper h2{
+    font-weight: normal;
+    margin-top:16px;
+}
+
+#wrapper p{
+    max-width: 450px;
+    margin:8px auto;
+}
+
+#wrapper p a{
+    color:var(--color-gray);
+    text-decoration: none;
+}
+
+#wrapper p a:hover{
+    transition:800ms;
+    color:var(--color-hover);
+    font-size:19px;
+}
+
+body footer{
+    padding: 32px;
+    text-align: center;
+    border-top: 2px solid #333;
+    background:rgba(0,0,0,0.1);
+}
+
+body footer a{
+    font-size: 18px;
+    line-height:28px;
+    color:var(--color-gray);
+    text-decoration: none;
+    margin: 0px 16px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
+body footer a:hover{
+    transition:800ms;
+    color:var(--color-hover);
+    font-size:19px;
+}
+
+
+/*-- Cards-- */
+
+
+.cards{
+    max-width: 800px;
+    margin:0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap:15px;
+}
+
+.card{
+    margin: 20px;
+    background: rgb(126, 126, 126);
+    border-radius: 5px;
+    border: 1px solid white;
+}
+
+.card_image_container img{
+    width:95%;
+    margin:10px 5px; 
+    
+    background-color: black;
+    border-radius: 5px;
+}
+
+
+.card_content,
+.card_info{
+    padding: 14px;
+}
+
+.card_info{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 5px 5px;
+    background-color:rgb(126, 126, 126);
+    border-radius: 5px;
+    filter: brightness(90%);
+}
+
+/*modal-overlay*/
+
+.modal-overlay{
+    background-color: rgba(0,0,0, 0.8);
+    width:100%;
+    height:100%;
+    position: fixed;
+    top:0;
+    opacity:0;
+    visibility: hidden;
+}
+
+.modal{
+    background-color: white;
+    width: 90%;
+    height: 90%;
+    margin: 5vh auto;
+    position: relative;
+}
+.modal .close-modal{
+    color:black;
+    position:absolute;
+    right:8px;
+    top:8px;
+    cursor: pointer;
+    
+}
+header .linked{
+    cursor: pointer;
+}
+
+/*modal active*/
+
+.modal-overlay.active{
+    opacity: 1;
+    visibility: visible;
+}
